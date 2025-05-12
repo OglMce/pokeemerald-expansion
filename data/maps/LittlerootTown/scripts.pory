@@ -1025,6 +1025,6 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 
 script LittlerootTown_EventScript_NewSign {
     lockall
-    msgbox("Hello World")
+    msgbox("Hello World!")
     releaseall
 }
