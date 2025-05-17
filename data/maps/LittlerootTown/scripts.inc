@@ -2055,4 +2055,4 @@ LittlerootTown_EventScript_NewSign::
 
 LittlerootTown_EventScript_NewSign_Text_0:
 # 1028 "data/maps/LittlerootTown/scripts.pory"
-	.string "Hello World$"
+	.string "Hello World!$"

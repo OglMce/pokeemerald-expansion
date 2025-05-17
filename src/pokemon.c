@@ -3409,9 +3409,14 @@ u8 CalculatePartyCountOfSide(u32 battler, struct Pokemon *party)
 
 u8 CalculatePlayerPartyCount(void)
 {
-    gPlayerPartyCount = CalculatePartyCount(gPlayerParty);
+    gPlayerPartyCount = CalculatePartyCount(gEnemyParty);
     return gPlayerPartyCount;
 }
+
+// u8 CalculateBattlePartyCount(void)
+//{
+    
+//}
 
 u8 CalculateEnemyPartyCount(void)
 {
@@ -3436,7 +3441,7 @@ u8 GetMonsStateToDoubles(void)
     if (gPlayerPartyCount == 1)
         return gPlayerPartyCount; // PLAYER_HAS_ONE_MON
 
-    for (i = 0; i < gPlayerPartyCount; i++)
+    for (i = 0; i < gEnemyPartyCount; i++)
     {
         if (GetMonData(&gPlayerParty[i], MON_DATA_SPECIES_OR_EGG, NULL) != SPECIES_EGG
          && GetMonData(&gPlayerParty[i], MON_DATA_HP, NULL) != 0
