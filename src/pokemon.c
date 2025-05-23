@@ -3410,13 +3410,11 @@ u8 CalculatePartyCountOfSide(u32 battler, struct Pokemon *party)
 u8 CalculatePlayerPartyCount(void)
 {
     gPlayerPartyCount = CalculatePartyCount(gEnemyParty);
+    if (gPlayerPartyCount == 1)
+        gPlayerPartyCount = 2;
+
     return gPlayerPartyCount;
 }
-
-// u8 CalculateBattlePartyCount(void)
-//{
-    
-//}
 
 u8 CalculateEnemyPartyCount(void)
 {
