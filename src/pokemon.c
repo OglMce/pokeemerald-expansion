@@ -64,6 +64,7 @@
 #include "constants/union_room.h"
 #include "constants/weather.h"
 #include "wild_encounter.h"
+#include <ctype.h>
 
 #define FRIENDSHIP_EVO_THRESHOLD ((P_FRIENDSHIP_EVO_THRESHOLD >= GEN_8) ? 160 : 220)
 
@@ -3409,7 +3410,12 @@ u8 CalculatePartyCountOfSide(u32 battler, struct Pokemon *party)
 
 u8 CalculatePlayerPartyCount(void)
 {
-    gPlayerPartyCount = CalculatePartyCount(gEnemyParty);
+    //gPlayerPartyCount = CalculatePartyCount(gEnemyParty);
+    if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
+        gPlayerPartyCount = CalculatePartyCount(gEnemyParty);
+    else
+        gPlayerPartyCount = CalculatePartyCount(gPlayerParty);  
+    
     if (gPlayerPartyCount == 1)
         gPlayerPartyCount = 2;
 

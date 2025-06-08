@@ -67,6 +67,7 @@ static EWRAM_DATA u16 sMovingNpcMapGroup = 0;
 static EWRAM_DATA u16 sMovingNpcMapNum = 0;
 static EWRAM_DATA u16 sFieldEffectScriptId = 0;
 
+
 static u8 sBrailleWindowId;
 static bool8 sIsScriptedWildDouble;
 
