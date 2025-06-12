@@ -232,7 +232,8 @@ const struct RematchTrainer gRematchTable[REMATCH_TABLE_ENTRIES] =
 static void Task_BattleStart(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
-
+    //DisplayPartyPokemonDataForChooseHalf();
+    //ReducePlayerPartyToSelectedMons();
     switch (tState)
     {
     case 0:

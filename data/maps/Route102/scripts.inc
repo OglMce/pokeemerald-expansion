@@ -69,6 +69,7 @@ Route102_EventScript_Tiana::
 	end
 
 Route102_EventScript_Allen::
+	special ChoosePartyForBattleFrontier
 	trainerbattle_single TRAINER_ALLEN, Route102_Text_AllenIntro, Route102_Text_AllenDefeated
 	msgbox Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	end
