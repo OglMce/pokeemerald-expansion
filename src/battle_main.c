@@ -243,6 +243,7 @@ COMMON_DATA u8 gLeveledUpInBattle = 0;
 COMMON_DATA u8 gHealthboxSpriteIds[MAX_BATTLERS_COUNT] = {0};
 COMMON_DATA u8 gMultiUsePlayerCursor = 0;
 COMMON_DATA u8 gNumberOfMovesToChoose = 0;
+COMMON_DATA u8 gBattleType = 0;
 
 static const struct ScanlineEffectParams sIntroScanlineParams16Bit =
 {

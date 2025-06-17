@@ -69,11 +69,24 @@ Route102_EventScript_Tiana::
 	end
 
 Route102_EventScript_Allen::
+	random 2
+	switch VAR_RESULT
+
 	msgbox BattleFrontier_BattleArenaLobby_Text_SelectThreeMons, MSGBOX_DEFAULT
 	setvar VAR_0x8005, 3
 	special ChoosePartyForBattleFrontier
+	
+	case 0, Script_Allen_Single //trainerbattle_single TRAINER_ALLEN, Route102_Text_AllenIntro
+	//trainerbattle_double TRAINER_ALLEN, Route102_Text_AllenIntro, Route102_Text_AllenDefeated, AbandonedShip_Rooms2_1F_Text_DanNotEnoughMons
+	case 1, Script_Allen_Double //msgbox Route102_Text_AllenPostBattle MSGBOX_AUTOCLOSE
+	end
+
+Script_Allen_Single::
 	trainerbattle_single TRAINER_ALLEN, Route102_Text_AllenIntro, Route102_Text_AllenDefeated
-	msgbox Route102_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+Script_Allen_Double::
+	msgbox Route102_Text_AllenPostBattle, MSGBOX_DEFAULT
 	end
 
 Route102_Text_WatchMeCatchPokemon:
